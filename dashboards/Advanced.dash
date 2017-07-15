@@ -1,0 +1,114 @@
+#
+# Main arguments, all optional
+#
+title: Advanced
+widget_dimensions: [110, 110]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 7
+
+gameroom_work_light_switch:
+  widget_type: switch
+  title: Game Room Work Lights
+  entity: switch.game_room_lights_switch
+  icon_on: fa-gamepad
+  icon_off: fa-gamepad
+
+gameroom_light_switch:
+  widget_type: switch
+  title: Game Room Lights
+  entity: light.game_room_dimmer
+  icon_on: fa-gamepad
+  icon_off: fa-gamepad
+
+living_room_chair_light_switch:
+  widget_type: switch
+  title: Living Room Chair
+  entity: light.ge_appliances_zll_light_0005db57_1
+  icon_on: fa-television
+  icon_off: fa-television
+
+living_room_door_light_switch:
+  widget_type: switch
+  title: Living Room Door
+  entity: light.ge_appliances_zll_light_00038784_1
+  icon_on: fa-television
+  icon_off: fa-television
+
+basement_light:
+  widget_type: switch
+  title: Basement Play Room Lights
+  entity: switch.basement_playroom_lights_switch
+  icon_on: fa-space-shuttle
+  icon_off: fa-space-shuttle
+
+basement_light_switch:
+  widget_type: switch
+  title: Basement Pole Lights
+  entity: light.basement_light_dimmer
+  icon_on: fa-space-shuttle
+  icon_off: fa-space-shuttle
+
+master_bedroom_fan_light_switch:
+  widget_type: switch
+  title: Master Bed Room Fan
+  entity: switch.master_bedroom_lights_switch
+  icon_on: fa-bed
+  icon_off: fa-bed
+  icon_off: fa-space-shuttle
+
+master_bedroom_light_switch:
+  widget_type: switch
+  title: Master Bed Room Fan
+  entity: light.master_bedroom_light_dimmer
+  icon_on: fa-bed
+  icon_off: fa-bed
+
+front_house_lamp_post:
+  widget_type: switch
+  title: Front Lamp Post
+  entity: light.front_lamp_post_level
+  icon_on: fa-home
+  icon_off: fa-home
+
+front_house_porch:
+  widget_type: switch
+  title: Front Porch
+  entity: light.front_porch_light_level
+  icon_on: fa-home
+  icon_off: fa-home
+
+office_desk_light_switch:
+  widget_type: switch
+  title: Office Lights
+  entity: light.office_desk_dimmer
+  icon_on: fa-laptop
+  icon_off: fa-laptop
+
+kitchen_addition_light_switch:
+  widget_type: switch
+  title: Kitchen Addition Lights
+  entity: switch.sunken_room_lights_switch
+  icon_on: fa-cutlery
+  icon_off: fa-cutlery
+  icon_off: fa-laptop
+
+kitchen_light_switch:
+  widget_type: switch
+  title: Kitchen Light
+  entity: light.kitchen_light_dimmer
+  icon_on: fa-cutlery
+  icon_off: fa-cutlery
+
+storage_room_b_switch:
+  widget_type: switch
+  title: Storage Room B Lights
+  entity: switch.storage_room_b_light_switch
+  icon_on: fa-dropbox
+  icon_off: fa-dropbox
+
+layout:
+  - gameroom_work_light_switch, gameroom_light_switch, living_room_chair_light_switch, living_room_door_light_switch, basement_light, basement_light_switch, master_bedroom_fan_light_switch
+  - master_bedroom_light_switch, front_house_lamp_post, front_house_porch, office_desk_light_switch, kitchen_addition_light_switch, kitchen_light_switch, storage_room_b_switch
+  - 
+  - include: bottom_panel

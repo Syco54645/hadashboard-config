@@ -1,0 +1,302 @@
+# DarkGlass Skin for HA Dashboard v2
+# Version 1.0
+# Date: 23/06/17
+# Author: Philippe Demartin on the base of the great Obsidian Skin for from Robert Pitera
+
+#
+# Custom head includes - should be a YAML List, e.g.:
+#
+#head_includes:
+#  - some include
+#  - some other include
+#
+# Text will be included verbatim in the head section of the doc, use for styles,
+# javascript or 3rd party css etc. etc.
+#
+# It is your responsibility to ensure the HTML is correct
+#
+
+# Script notes for SimplyRed
+#
+# Script below changes the background color throughout the day starting at a light
+# gray and getting progressively darker towards night.  Be aware that if you remove
+# it, you will end up with a white background so plan accordingly if this is a problem.
+#
+# The meta tag jsut above this refreshes your dash once an hour so you can see the
+# effect of the script without manually reloading the dashboard.  The content value
+# is in seconds so if you want it shorter or longer you can adjust that value
+#
+#
+
+head_includes:
+ - <! head tags go here ->
+ 
+#
+# Custom body includes - should be a YAML List, e.g.:
+#
+#body_includes:
+#  - some include
+#  - some other include
+#
+# Text will be included verbatim in the body section of the doc, use it for JavaScript
+#
+# It is your responsibility to ensure the HTML is correct
+#
+
+body_includes:
+ - <! body tags go here ->
+
+#
+# Styles
+#
+
+white: "#fff"
+red: "#DC5945"
+green: "#42C873"
+blue: "#0C72E8"
+purple: "#821AE8"
+yellow: "#F5BC00"
+cyan: "#45B4D5"
+
+gray_dark: "#444"
+gray_medium: "#666"
+gray_light: "#888"
+
+#Page and widget defaults
+text_style: "color: #fff"
+
+#These are used for icons and indicators
+style_inactive: "background-color: $gray_light"
+style_active: "background-color: $green"
+style_active_warn: "color: $yellow"
+style_info: "color: $red"
+style_title: "color: $white"
+style_title2: "color: $white"
+
+# Alternate widget styles
+# stripped is a transparent mod that removes the texture, border and drop shadows
+# no_texture removes the texture and replaces it with a black background 
+stripped: "background-image: none; background-color: rgba(0,0,0,0.6); border-style: none; box-shadow: none !important"
+no_texture: "background: $gray_light; background-image: none; color: black; border-style: inset"
+yellow_widget_style: "background: $yellow; background-image: none; color: white;"
+
+# Widget Default Definitions
+
+scene_icon_on: fa-square
+scene_icon_off: fa-square
+scene_icon_style_active: $style_active
+scene_icon_style_inactive: $style_inactive
+scene_title_style: $style_title
+scene_title2_style: $style_title2
+scene_widget_style: $no_texture
+scene_state_text_style: $style_info
+
+mode_icon_on: fa-arrows-alt
+mode_icon_off: fa-arrows-alt
+mode_icon_style_active: $style_active
+mode_icon_style_inactive: $style_inactive
+mode_title_style: $style_title
+mode_title2_style: $style_title2
+mode_widget_style: $no_texture
+mode_state_text_style: $style_info
+
+script_icon_on: fa-th-large
+script_icon_off: fa-th-large
+script_icon_style_active: $style_active
+script_icon_style_inactive: $style_inactive
+script_title_style: $style_title
+script_title2_style: $style_title2
+script_widget_style: $no_texture
+script_state_text_style: $style_info
+
+binary_sensor_icon_on: fa-bullseye fa-spin
+binary_sensor_icon_off: fa-minus
+binary_sensor_icon_style_active: $style_active_warn
+binary_sensor_icon_style_inactive: $style_inactive
+binary_sensor_title_style: $style_title
+binary_sensor_title2_style: $style_title2
+binary_sensor_widget_style: $no_texture
+binary_sensor_state_text_style: $style_info
+
+device_tracker_icon_on: fa-user
+device_tracker_icon_off: fa-user
+device_tracker_icon_style_active: $style_active
+device_tracker_icon_style_inactive: $style_inactive
+device_tracker_title_style: $style_title
+device_tracker_title2_style: $style_title2
+device_tracker_widget_style: $no_texture
+device_tracker_state_text_style: $style_info
+
+input_boolean_icon_on: fa-sliders
+input_boolean_icon_off: fa-sliders
+input_boolean_icon_style_active: $style_active
+input_boolean_icon_style_inactive: $style_inactive
+input_boolean_title_style: $style_title
+input_boolean_title2_style: $style_title2
+input_boolean_widget_style: $no_texture
+input_boolean_state_text_style: $style_info
+
+switch_icon_on: fa-circle
+switch_icon_off: fa-circle-thin
+switch_icon_style_active: $style_active
+switch_icon_style_inactive: $style_inactive
+switch_title_style: $style_title
+switch_title2_style: $style_title2
+switch_widget_style: $no_texture
+switch_state_text_style: $style_info
+
+lock_icon_on: fa-unlock-alt
+lock_icon_off: fa-lock
+lock_icon_style_active: $style_active_warn
+lock_icon_style_inactive: $style_inactive
+lock_title_style: $style_title
+lock_title2_style: $style_title2
+lock_widget_style: $no_texture
+lock_state_text_style: $style_info
+
+cover_icon_on: fa-arrows-v
+cover_icon_off: fa-arrows-v
+cover_icon_style_active: $style_active_warn
+cover_icon_style_inactive: $style_inactive
+cover_title_style: $style_title
+cover_title2_style: $style_title2
+cover_widget_style: $no_texture
+cover_state_text_style: $style_info
+
+clock_date_style: "color: $white; font-size: 150%; margin-bottom: 15px;"
+clock_time_style: "color: $white; font-weight: 600;"
+clock_widget_style: "border-style: none; background-color: $red"
+
+weather_main_style: "color: $white; font-size: 75%; font-weight: 700;"
+weather_unit_style: "color: $white; font-size: 200%"
+weather_sub_style: "color: $white; font-size: 130%"
+weather_widget_style: $yellow_widget_style
+
+label_title_style: $style_title
+label_title2_style: $style_title2
+label_text_style: $style_info
+label_widget_style: $no_texture
+
+sensor_title_style: $style_title
+sensor_title2_style: $style_title2
+sensor_value_style: "color: white; font-size: 300%; font-weight: 700"
+sensor_text_style: "color: white; font-size: 100%; font-weight: 700"
+sensor_unit_style: "color: white; font-size: 150%; font-weight: 700"
+sensor_widget_style: "background-color: $blue"
+
+reload_icon_active: fa-spinner fa-spin
+reload_icon_inactive: fa-refresh
+reload_icon_active_style: $style_active
+reload_icon_inactive_style: "color: $white"
+reload_title_style: "color: $white"
+reload_title2_style: $style_title2
+reload_widget_style: $no_texture
+
+navigate_icon_active: fa-spinner fa-spin
+navigate_icon_inactive: fa-gear
+navigate_icon_active_style: $style_active
+navigate_icon_inactive_style: $style_active
+navigate_title_style: $style_title
+navigate_title2_style: $style_title2
+navigate_widget_style: $no_texture
+
+media_player_icon_play: fa-play
+media_player_icon_pause: fa-pause
+media_player_icon_stop: fa-stop
+media_player_icon_up: fa-plus
+media_player_icon_down: fa-minus
+media_player_title_style: $style_title
+media_player_media_title_style: $style_title2
+media_player_album_style: $style_title2
+media_player_artist_style: $style_title2
+media_player_icon_style_active: "color: $cyan"
+media_player_icon_style_inactive: "color: $gray_light"
+media_player_state_text_style: "color: $white"
+media_player_units_style: "color: $white"
+media_player_level_style: "color: $white"
+media_player_level_up_style: "color: $gray_light"
+media_player_level_down_style: "color: $gray_light"
+media_player_widget_style: $no_texture
+
+
+light_icon_on: fa-lightbulb-o
+light_icon_off: fa-lightbulb-o
+light_icon_up: fa-plus
+light_icon_down: fa-minus
+light_title_style: $style_title
+light_title2_style: $style_title2
+light_icon_style_active: $style_active
+light_icon_style_inactive: $style_inactive
+light_state_text_style: $style_info
+light_level_style: $style_inactive
+light_level_up_style: $style_inactive
+light_level_down_style: $style_inactive
+light_widget_style: $no_texture
+light_unit_style:  $style_inactive
+
+input_slider_icon_up: fa-plus
+input_slider_icon_down: fa-minus
+input_slider_title_style: $style_title
+input_slider_title2_style: $style_title2
+input_slider_unit_style: $style_info
+input_slider_level_style: $style_info
+input_slider_level_up_style: $style_inactive
+input_slider_level_down_style: $style_inactive
+input_slider_widget_style: $no_texture
+
+climate_icon_up: fa-plus
+climate_icon_down: fa-minus
+climate_title_style: $style_title
+climate_title2_style: $style_title2
+climate_level_style: "color: $cyan; font-size: 300%"
+climate_unit_style: "color: $cyan; font-size: 95%"
+climate_level_up_style: $style_inactive
+climate_level_down_style: $style_inactive
+climate_widget_style: $no_texture
+climate_state_text_style: $white
+climate_level2_style: "color: $cyan; font-size: 95%"
+climate_unit2_style: "color: $cyan; font-size: 65%"
+
+group_icon_on: fa-circle
+group_icon_off: fa-circle-thin
+group_icon_up: fa-plus
+group_icon_down: fa-minus
+group_title_style: $style_title
+group_title2_style: $style_title2
+group_icon_style_active: $style_active
+group_icon_style_inactive: $style_inactive
+group_state_text_style: $style_info
+group_level_style: "$style_inactive"
+group_level_up_style: "$style_inactive"
+group_level_down_style: "$style_inactive"
+group_widget_style: $no_texture
+group_unit_style: "$style_inactive"
+
+iframe_title_style: "$style_title; background-color: rgba(0, 0, 0, 0.5)"
+iframe_widget_style: $no_texture
+
+alarm_title_style: $style_title
+alarm_widget_style: $no_texture
+alarm_title2_style: $style_title2
+alarm_state_style: "color: white; background-color: $purple !important; font-size: 100%; font-weight: 600; height: 100%"
+alarm_panel_state_style: "color: $cyan"
+alarm_panel_code_style: "color: $cyan"
+alarm_panel_background_style: "background-color: rgba(0,0,30,1)"
+alarm_panel_button_style: "color: $cyan; background-color: rgba(0,0,50,1)"
+
+camera_widget_style: $no_texture
+camera_title_style: "$style_title; background-color: rgba(0, 0, 0, 0.5)"
+
+gauge_widget_style: $no_texture
+gauge_title_style: $style_title
+gauge_title2_style: $style_title2
+gauge_low_value_color: "$cyan"
+gauge_med_value_color: "$cyan"
+gauge_high_value_color: "$cyan"
+gauge_value_bgcolor: "$gray_medium"
+gauge_text_color: "$cyan"
+
+rss_title_style: $style_title
+rss_title2_style: $style_title2
+rss_text_style: "color: $cyan"
+rss_widget_style: $no_texture

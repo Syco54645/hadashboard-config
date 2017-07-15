@@ -1,0 +1,71 @@
+#
+# Main arguments, all optional
+#
+title: Status
+widget_dimensions: [110, 110]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 7
+
+  #- sensor.family_room_nest_protect_co_status
+  #- sensor.hallway_nest_protect_co_status
+  #- binary_sensor.family_room_nest_protect_online
+#  - binary_sensor.hallway_nest_protect_online
+#  - sensor.basement_nest_protect_co_status
+#  - binary_sensor.basement_nest_protect_online
+
+living_room_door_status:
+  widget_type: sensor
+  title: Living Room Door Status
+  entity: sensor.living_room_door_status
+
+deck_door_status:
+  widget_type: sensor
+  title: Deck Door Status
+  entity: sensor.deck_door_status
+
+gocontrol_motion:
+  widget_type: sensor
+  title: Motion Sensor Status
+  entity: sensor.gocontrol_motion
+
+ssl_certificate_expiry:
+  widget_type: sensor
+  title: SSL Cert Expiry
+  entity: sensor.ssl_certificate_expiry
+
+family_room_nest_protect_smoke_status:
+  widget_type: sensor
+  title: Family Room Smoke Status
+  entity: sensor.family_room_nest_protect_smoke_status
+
+hallway_nest_protect_smoke_status:
+  widget_type: sensor
+  title: Hallway Smoke Status
+  entity: sensor.hallway_nest_protect_smoke_status
+
+basement_nest_protect_smoke_status:
+  widget_type: sensor
+  title: Basement Smoke Status
+  entity: sensor.basement_nest_protect_smoke_status
+
+family_room_nest_protect_co_status:
+  widget_type: sensor
+  title: Family Room CO Status
+  entity: sensor.family_room_nest_protect_co_status
+
+hallway_nest_protect_co_status:
+  widget_type: sensor
+  title: Hallway CO Status
+  entity: sensor.hallway_nest_protect_co_status
+
+basement_nest_protect_co_status:
+  widget_type: sensor
+  title: Basement CO Status
+  entity: sensor.basement_nest_protect_smoke_status
+
+layout:
+  - ssl_certificate_expiry, living_room_door_status, deck_door_status, gocontrol_motion
+  - family_room_nest_protect_smoke_status, hallway_nest_protect_smoke_status, basement_nest_protect_smoke_status, family_room_nest_protect_co_status, hallway_nest_protect_co_status, basement_nest_protect_co_status
+  - 
+  - include: bottom_panel

@@ -1,0 +1,39 @@
+load_main_panel:
+  widget_type: navigate
+  title: Main Panel
+  icon_active: fa-home
+  icon_inactive: fa-home
+  url: /Hello
+  icon_style: "background-color: orange !important"
+
+load_status:
+  widget_type: navigate
+  title: Status
+  icon_active: fa-bar-chart
+  icon_inactive: fa-bar-chart
+  url: /Status
+  icon_style: "background-color: orange !important"
+
+load_advanced:
+  widget_type: navigate
+  title: Advanced
+  icon_active: fa-gears
+  icon_inactive: fa-gears
+  url: /Advanced
+  icon_style: "background-color: orange !important"
+
+alarm:
+  widget_type: alarm
+  title: Alarm Status
+  state_style: "background-color: transparent"
+  entity: alarm_control_panel.ha_alarm
+
+empty1:
+  widget_type: label
+empty2:
+  widget_type: label
+empty3:
+  widget_type: label
+
+layout:
+  - load_main_panel, load_status, load_advanced, empty1, empty2, empty3, alarm

@@ -1,0 +1,91 @@
+#
+# Main arguments, all optional
+#
+title: Panel
+widget_dimensions: [110, 110]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 7
+
+clock:
+  widget_type: clock
+
+gameroom_light_switch:
+  widget_type: switch
+  title: Game Room
+  entity: group.game_room_light_slaves
+  icon_on: fa-gamepad
+  icon_off: fa-gamepad
+
+living_room_light_switch:
+  widget_type: switch
+  title: Living Room
+  entity: group.lr_light_slaves
+  icon_on: fa-television
+  icon_off: fa-television
+
+basement_light_switch:
+  widget_type: switch
+  title: Basement Play Room
+  entity: group.basement_light_slaves
+  icon_on: fa-space-shuttle
+  icon_off: fa-space-shuttle
+
+master_bedroom_light_switch:
+  widget_type: switch
+  title: Master Bed Room
+  entity: group.master_bedroom_room_light_slaves
+  icon_on: fa-bed
+  icon_off: fa-bed
+
+front_house_light_switch:
+  widget_type: switch
+  title: Front House Lights
+  entity: group.front_light_slaves
+  icon_on: fa-home
+  icon_off: fa-home
+
+office_desk_light_switch:
+  widget_type: switch
+  title: Office Lights
+  entity: light.office_desk_dimmer
+  icon_on: fa-laptop
+  icon_off: fa-laptop
+
+kitchen_light_switch:
+  widget_type: switch
+  title: Kitchen Lights
+  entity: group.kitchen_light_slaves
+  icon_on: fa-cutlery
+  icon_off: fa-cutlery
+
+storage_room_b_switch:
+  widget_type: switch
+  title: Storage Room B Lights
+  entity: switch.storage_room_b_light_switch
+  icon_on: fa-dropbox
+  icon_off: fa-dropbox
+
+weather:
+  widget_type: weather
+  units: "&deg;F"
+
+living_room_temperature:
+  widget_type: sensor
+  title: Temperature
+  units: "&deg;F"
+  precision: 0
+  entity: sensor.living_room_thermostat_temperature
+
+living_room_humidity:
+  widget_type: sensor
+  title: Humidity
+  units: "%"
+  precision: 0
+  entity: sensor.living_room_thermostat_humidity
+
+layout:
+  - clock(2x1), weather(2x2), gameroom_light_switch, living_room_light_switch, kitchen_light_switch
+  - front_house_light_switch, basement_light_switch, master_bedroom_light_switch, office_desk_light_switch, storage_room_b_switch
+  - living_room_temperature, living_room_humidity
+  - include: bottom_panel
