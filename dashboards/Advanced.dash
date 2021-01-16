@@ -21,19 +21,19 @@ gameroom_light_switch:
   icon_on: fa-gamepad
   icon_off: fa-gamepad
 
-living_room_chair_light_switch:
+living_room_couch_light_switch:
   widget_type: switch
-  title: Living Room Chair
-  entity: light.ge_appliances_zll_light_0005db57_1
-  icon_on: fa-television
-  icon_off: fa-television
+  title: Living Room Chouch
+  entity: light.living_room_floor_lamps
+  icon_on: fa-tv
+  icon_off: fa-tv
 
-living_room_door_light_switch:
+living_room_tv_light_switch:
   widget_type: switch
-  title: Living Room Door
+  title: Living Room TV
   entity: light.ge_appliances_zll_light_00038784_1
-  icon_on: fa-television
-  icon_off: fa-television
+  icon_on: fa-tv
+  icon_off: fa-tv
 
 basement_light:
   widget_type: switch
@@ -89,26 +89,25 @@ kitchen_addition_light_switch:
   widget_type: switch
   title: Kitchen Addition Lights
   entity: switch.sunken_room_lights_switch
-  icon_on: fa-cutlery
-  icon_off: fa-cutlery
-  icon_off: fa-laptop
+  icon_on: fa-utensils
+  icon_off: fa-utensils
 
 kitchen_light_switch:
   widget_type: switch
   title: Kitchen Light
   entity: light.kitchen_light_dimmer
-  icon_on: fa-cutlery
-  icon_off: fa-cutlery
+  icon_on: fa-utensils
+  icon_off: fa-utensils
 
 storage_room_b_switch:
   widget_type: switch
   title: Storage Room B Lights
-  entity: switch.storage_room_b_light_switch
-  icon_on: fa-dropbox
-  icon_off: fa-dropbox
+  entity: switch.storage_room_b_l_switch
+  icon_on: fa-box
+  icon_off: fa-box
 
 layout:
-  - gameroom_work_light_switch, gameroom_light_switch, living_room_chair_light_switch, living_room_door_light_switch, basement_light, basement_light_switch, master_bedroom_fan_light_switch
+  - gameroom_work_light_switch, gameroom_light_switch, living_room_couch_light_switch, living_room_tv_light_switch, basement_light, basement_light_switch, master_bedroom_fan_light_switch
   - master_bedroom_light_switch, front_house_lamp_post, front_house_porch, office_desk_light_switch, kitchen_addition_light_switch, kitchen_light_switch, storage_room_b_switch
-  - 
+  -
   - include: bottom_panel

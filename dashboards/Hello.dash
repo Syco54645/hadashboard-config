@@ -21,8 +21,8 @@ living_room_light_switch:
   widget_type: switch
   title: Living Room
   entity: group.lr_light_slaves
-  icon_on: fa-television
-  icon_off: fa-television
+  icon_on: fa-tv
+  icon_off: fa-tv
 
 basement_light_switch:
   widget_type: switch
@@ -56,15 +56,15 @@ kitchen_light_switch:
   widget_type: switch
   title: Kitchen Lights
   entity: group.kitchen_light_slaves
-  icon_on: fa-cutlery
-  icon_off: fa-cutlery
+  icon_on: fa-utensils
+  icon_off: fa-utensils
 
 storage_room_b_switch:
   widget_type: switch
   title: Storage Room B Lights
-  entity: switch.storage_room_b_light_switch
-  icon_on: fa-dropbox
-  icon_off: fa-dropbox
+  entity: switch.storage_room_b_l_switch
+  icon_on: fa-box
+  icon_off: fa-box
 
 weather:
   widget_type: weather

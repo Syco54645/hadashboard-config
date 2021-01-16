@@ -9,16 +9,16 @@ load_main_panel:
 load_status:
   widget_type: navigate
   title: Status
-  icon_active: fa-bar-chart
-  icon_inactive: fa-bar-chart
+  icon_active: fa-chart-bar
+  icon_inactive: fa-chart-bar
   url: /Status
   icon_style: "background-color: orange !important"
 
 load_advanced:
   widget_type: navigate
   title: Advanced
-  icon_active: fa-gears
-  icon_inactive: fa-gears
+  icon_active: fa-cogs
+  icon_inactive: fa-cogs
   url: /Advanced
   icon_style: "background-color: orange !important"
 
