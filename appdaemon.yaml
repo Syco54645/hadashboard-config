@@ -1,0 +1,40 @@
+logs:
+  main_log:
+    filename: /conf/logs/appdaemon.log
+  access_log:
+    filename: /conf/logs/access.log
+  error_log:
+    filename: /conf/logs/error.log
+  diag_log:
+    filename: /conf/logs/diag.log
+    log_generations: 5
+    log_size: 1024
+    format: "{asctime} {levelname:<8} {appname:<10}: {message}"
+  test_log:
+    name: TestLog
+    filename: /conf/logs/test.log
+http:
+  url: http://$HOSTNAME:5050
+appdaemon:
+  disable_apps: 1
+  logfile: STDOUT
+  errorfile: STDERR
+  threads: '10'
+  elevation: 300
+  latitude: 52.3731339
+  longitude: 4.8903147
+  time_zone: America/New_York
+  plugins:
+    HASS:
+      type: hass
+      ha_url: !secret hass_url
+      token: !secret hass_token
+# Apps
+hello_world:
+  module: hello
+  class: HelloWorld
+
+hadashboard:
+  dash_url: http://$HOSTNAME:5050
+  dashboard_dir: /conf/dashboards
+api:

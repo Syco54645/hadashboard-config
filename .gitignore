@@ -1,7 +1,8 @@
-appdaemon.yaml
+secrets.yaml
 compiled/
 custom_css/blackglass/
 dashboards/.Test.dash.swp
 dashboards/Single.dash
 dashboards/Test.dash
-
+bak/
+logs/
